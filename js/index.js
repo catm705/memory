@@ -3,6 +3,7 @@ var constants = new (function() {
     var rows = 3;
     var columns = 6;
     var numMatches = (rows * columns) / 2;
+    
     this.getRows = function() { return rows; };
     this.getColumns = function() { return columns; };
     this.getNumMatches = function() { return numMatches; };
