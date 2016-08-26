@@ -3,7 +3,7 @@ var constants = new (function() {
     var rows = 3;
     var columns = 6;
     var numMatches = (rows * columns) / 2;
-    
+
     this.getRows = function() { return rows; };
     this.getColumns = function() { return columns; };
     this.getNumMatches = function() { return numMatches; };
@@ -105,7 +105,7 @@ function createRandom() {
 
 var app = angular.module('cards', ['ngAnimate']);
 
-app.controller("CardController", function($scope, $timeout) {
+app.controller("CardController", function( $scope, $timeout ) {
 	$scope.deck = createDeck();
 	$scope.isGuarding = true;
 	$scope.inGame = false;
@@ -144,8 +144,6 @@ app.controller("CardController", function($scope, $timeout) {
 
 	// start the timer as soon as the player presses start
 	$scope.start = function(){
-		// I need to fix this redundancy. I initially did not create this
-		// game with a start button.
 		$scope.deck = createDeck();
 		// set the time of 1 minutes and remove the cards guard
 		$scope.timeLimit = 60000;
